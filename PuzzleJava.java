@@ -1,16 +1,16 @@
-// PuzzleJava.java is the source file and the content inside is called the source code. Note, this class is public, this makes it accessible from another class.
-import java.util.Arrays;                   // Arrays class in java.util package, collection framework. Provides access to dynamically create and accesdd java array.  
-import java.util.Collections;			   // Class that consist of static methods that operate on or return collections. Use to collect and shuffle an ArrayList
-import java.util.Random;				   //  An instance of this class is used to generate a stream of pseudorom numbers. Used in conjuction with collections.
-import java.util.ArrayList;				   // This module provides us the ability to create a modifiable array, there are some slight changes in how you interact with it.
+// PuzzleJava.java is the source file and the content inside is called the source code. Note, this class is public, this class is being accessed by MainMethod.java
+import java.util.Arrays;                   
+import java.util.Collections;			  
+import java.util.Random;				  
+import java.util.ArrayList;				   
 public class PuzzleJava {				   // PuzzleJava is a class, Java loves OOP. It is imortant that your file namem is exactly the same as your class name.
 	//Create an array with the following values: 3,5,1,2,7,9,8,13,25,32. Print the sum of all numbers in the array. Also have the function return an array that only includes numbers that are greater than 10 (e.g. when you pass the array above, it should return an array with the values of 13,25,32)
 	public static int[] sumReturn(int[] arr1, int number){           // Method/function named sumReturn of Int[] type with 2 paramenters int[] and int, this method is accessed from the MainMethod class.
-		ArrayList<Integer> arrayGreater = new ArrayList<Integer>();  // in order to create and modify an array a util module provides us with an ArrayList.
+		ArrayList<Integer> arrayGreater = new ArrayList<Integer>();  
 		int sum = 0;
 		int initialization1 = 0;
-		for(int x = 0; x < arr1.length; x++){						 // int[] arr1 interation using a for loop
-			sum += arr1[x];											 // while iterating we add all array values and store in int variable named sum.
+		for(int x = 0; x < arr1.length; x++){						 
+			sum += arr1[x];											 
 			if (arr1[x] > number){									 // while iterating we search for values bigger than number. 
 				arrayGreater.add(arr1[x]);							 // when value is bigger than number its added to ArrayList<Integer> named arrayGreater.
 				initialization1++;									 // Keeping track of how many numbers found, to create a int[] in order to return array
