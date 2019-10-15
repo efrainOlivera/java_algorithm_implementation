@@ -1,31 +1,35 @@
-// PuzzleJava.java is the source file and the content inside is called the source code. Note, this class is public, this class is being accessed by MainMethod.java
+/* PuzzleJava.java is the source file and the content inside is called the source code. 
+Note, this class is public, this class is being accessed by MainMethod.java*/
 import java.util.Arrays;                   
 import java.util.Collections;			  
 import java.util.Random;				  
 import java.util.ArrayList;				   
-public class PuzzleJava {				   // PuzzleJava is a class, Java loves OOP. It is imortant that your file namem is exactly the same as your class name.
-	//Create an array with the following values: 3,5,1,2,7,9,8,13,25,32. Print the sum of all numbers in the array. Also have the function return an array that only includes numbers that are greater than 10 (e.g. when you pass the array above, it should return an array with the values of 13,25,32)
-	public static int[] sumReturn(int[] arr1, int number){           // Method/function named sumReturn of Int[] type with 2 paramenters int[] and int, this method is accessed from the MainMethod class.
-		ArrayList<Integer> arrayGreater = new ArrayList<Integer>();  
+public class PuzzleJava {	// PuzzleJava is a class, Java loves OOP. It is imortant that your file namem is exactly the same as your class name.
+	/*Create an array with the following values: 3,5,1,2,7,9,8,13,25,32. 
+	Print the sum of all numbers in the array. Also have the function return an array that only 
+	includes numbers that are greater than 10 (e.g. when you pass the array above, it should return an array with the values of 13,25,32) */
+	public static int[] sumReturn(int[] arr1, int number){           // Method/function named sumReturn of Int[] type with 2 paramenters int[] and int,
+		ArrayList<Integer> arrayGreater = new ArrayList<Integer>();  // this method is accessed from the MainMethod class.
 		int sum = 0;
 		int initialization1 = 0;
 		for(int x = 0; x < arr1.length; x++){						 
 			sum += arr1[x];											 
-			if (arr1[x] > number){									 // while iterating we search for values bigger than number. 
-				arrayGreater.add(arr1[x]);							 // when value is bigger than number its added to ArrayList<Integer> named arrayGreater.
-				initialization1++;									 // Keeping track of how many numbers found, to create a int[] in order to return array
+			if (arr1[x] > number){					// while iterating we search for values bigger than number. 
+				arrayGreater.add(arr1[x]);			// when value is bigger than number its added to ArrayList<Integer> named arrayGreater.
+				initialization1++;					// Keeping track of how many numbers found, to create a int[] in order to return array
 			}
 		}
 		int[] myArray;												
-		myArray = new int[initialization1];							 // We can't return an ArrayList<Integer> so we have to covert to int[]. Here we use varible initialization1 as the initialization for the int[]
-		for(int y = 0; y < arrayGreater.size(); y++){				 // ArrayList<Integer> arrayGreater interation and creating a duplicate as a int[]						 
+		myArray = new int[initialization1];			// We can't return an ArrayList<Integer> so we have to covert to int[]. Here we use varible initialization1 as the initialization for the int[]
+		for(int y = 0; y < arrayGreater.size(); y++){	// ArrayList<Integer> arrayGreater interation and creating a duplicate as a int[]						 
 			myArray[y] = arrayGreater.get(y);
 		} 
-		System.out.println(sum);									 // Is the bit of code that enabled us to output something to our command prompt or terminal. equivalent to javascrip console.log()
+		System.out.println(sum);				     // Is the bit of code that enabled us to output something to our command prompt or terminal. equivalent to javascrip console.log()
 		return myArray;
 	}
 
-	// Create an array with the following values: Nancy, Jinichi, Fujibayashi, Momochi, Ishikawa. Shuffle the array and print the name of each person. Have the method also return an array with names that are longer than 5 characters.
+	/* Create an array with the following values: Nancy, Jinichi, Fujibayashi, Momochi, Ishikawa.
+	 Shuffle the array and print the name of each person. Have the method also return an array with names that are longer than 5 characters.*/
 	public String[] theNames(String[] names,  int number){
 		ArrayList<String> newList = new ArrayList<String>();
 		ArrayList<String> moreThan = new ArrayList<String>();
@@ -52,7 +56,9 @@ public class PuzzleJava {				   // PuzzleJava is a class, Java loves OOP. It is 
 	}
 
 
-	// Create an array that contains all 26 letters of the alphabet (this array must have 26 values). Shuffle the array and, after shuffling, display the last letter from the array. Have it also display the first letter of the array. If the first letter in the array is a vowel, have it display a message.
+	/*Create an array that contains all 26 letters of the alphabet (this array must have 26 values). Shuffle the array and, 
+	after shuffling, display the last letter from the array. Have it also display the first letter of the array. If the first 
+	letter in the array is a vowel, have it display a message.*/
 	public static String[] alphabetManipulation(String[] bareAlphabet){
 		ArrayList<String> transformed = new ArrayList<String>();
 		for(int a = 0; a < bareAlphabet.length; a++){
@@ -87,10 +93,10 @@ public class PuzzleJava {				   // PuzzleJava is a class, Java loves OOP. It is 
 			toIntArray[x] = createdArray.get(x);
 		}
 		return toIntArray;
-
 	}
 
-	// Generate and return an array with 10 random nuumbers betweeb 55-100 and have it be sorted(showing the smallest number in the begginning) Display all the numbers in the array. Next, display the minimum vaue tin te array as well as the maximum value.
+	/* Generate and return an array with 10 random nuumbers betweeb 55-100 and have it be sorted(showing the smallest number
+	in the begginning) Display all the numbers in the array. Next, display the minimum vaue tin te array as well as the maximum value.*/
 	public static int[] retrieve(int from, int to, int numberOfValues){
 		ArrayList<Integer> arrayCreated = new ArrayList<Integer>();
 		Random r = new Random();
@@ -148,7 +154,6 @@ public class PuzzleJava {				   // PuzzleJava is a class, Java loves OOP. It is 
 	 	}
 	 	return createdArray;
 	 } 
-
 } 
 
 
